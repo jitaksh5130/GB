@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Green Bharat Chemical – Product Catalog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Green Bharat Private Limited – Pesticides, fungicides, herbicides and PGR for every crop." />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: "Poppins", sans-serif;
+      background: #f7faf7;
+      color: #123213;
+      line-height: 1.5;
+    }
+    a { color: inherit; text-decoration: none; }
+
+    /* Layout */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: #ffffffcc;
+      backdrop-filter: blur(6px);
+      border-bottom: 1px solid #e0e0e0;
+    }
+    .nav {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.7rem 1rem;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-weight: 700;
+      color: #1b5e20;
+    }
+    .logo-icon img {
+  width: 40px;
+  height: 50px;
+  object-fit: contain;
+  border-radius: 100%;
+}
+
+    .logo-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: #1b5e20;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+    }
+    .nav-links {
+      display: flex;
+      gap: 1rem;
+      font-size: 0.95rem;
+    }
+    .nav-links a {
+      padding: 0.25rem 0.5rem;
+      border-radius: 999px;
+    }
+    .nav-links a:hover {
+      background: #e8f5e9;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #e8f5e9, #ffffff);
+      border-bottom: 1px solid #e0e0e0;
+    }
+    .hero-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2.3fr);
+      gap: 2rem;
+      padding: 2.5rem 1.2rem 2rem;
+      align-items: center;
+    }
+    .hero h1 {
+      font-size: 2.2rem;
+      line-height: 1.2;
+      color: #1b5e20;
+      margin-bottom: 0.7rem;
+    }
+    .hero p {
+      font-size: 0.98rem;
+      max-width: 520px;
+      margin-bottom: 1.3rem;
+    }
+    .tagline {
+      font-weight: 600;
+      color: #2e7d32;
+      margin-bottom: 0.3rem;
+    }
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-bottom: 1.4rem;
+    }
+    .hero-badge {
+      font-size: 0.78rem;
+      padding: 0.25rem 0.7rem;
+      border-radius: 999px;
+      border: 1px solid #c8e6c9;
+      background: #ffffff;
+    }
+    .hero-cta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.7rem;
+      align-items: center;
+    }
+    .btn-primary, .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.55rem 1.2rem;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      font-size: 0.9rem;
+      font-weight: 600;
+      transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    .btn-primary {
+      background: #2e7d32;
+      color: #fff;
+      box-shadow: 0 4px 10px rgba(46, 125, 50, 0.3);
+    }
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 16px rgba(46, 125, 50, 0.35);
+    }
+    .btn-outline {
+      background: transparent;
+      color: #2e7d32;
+      border: 1px solid #2e7d32;
+    }
+    .btn-outline:hover {
+      background: #e8f5e9;
+    }
+
+    .hero-stats {
+      padding: 1.5rem;
+      border-radius: 1.2rem;
+      background: #ffffff;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      border: 1px solid #e0e0e0;
+    }
+    .hero-stats h2 {
+      font-size: 1.1rem;
+      margin-bottom: 0.9rem;
+      color: #1b5e20;
+    }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.7rem;
+      margin-bottom: 1rem;
+    }
+    .stat {
+      padding: 0.6rem 0.7rem;
+      border-radius: 0.9rem;
+      background: #f1f8e9;
+      font-size: 0.8rem;
+    }
+    .stat .num {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #2e7d32;
+    }
+    .stat span {
+      display: block;
+    }
+    .hero-note {
+      font-size: 0.78rem;
+      color: #666;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2rem 1.2rem 3rem;
+    }
+
+    section {
+      margin-bottom: 2.5rem;
+    }
+    section h2 {
+      font-size: 1.5rem;
+      margin-bottom: 0.7rem;
+      color: #1b5e20;
+    }
+    section p.section-subtitle {
+      font-size: 0.9rem;
+      color: #555;
+      margin-bottom: 1rem;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: minmax(0,2.5fr) minmax(0,2fr);
+      gap: 1.5rem;
+    }
+    .card {
+      background: #fff;
+      border-radius: 1rem;
+      padding: 1rem 1.3rem;
+      border: 1px solid #e0e0e0;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.04);
+      font-size: 0.9rem;
+    }
+    .card h3 {
+      font-size: 1.05rem;
+      margin-bottom: 0.4rem;
+      color: #2e7d32;
+    }
+    .card ul {
+      margin-left: 1rem;
+      padding-left: 0.2rem;
+      margin-top: 0.4rem;
+    }
+    .card li {
+      margin-bottom: 0.25rem;
+    }
+
+    .category-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin: 0.6rem 0 1rem;
+    }
+    .chip {
+      padding: 0.25rem 0.7rem;
+      border-radius: 999px;
+      border: 1px solid #c8e6c9;
+      background: #fff;
+      font-size: 0.8rem;
+      cursor: pointer;
+      transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+    }
+    .chip.active {
+      background: #2e7d32;
+      border-color: #2e7d32;
+      color: #fff;
+    }
+
+    .product-controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.7rem;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.8rem;
+    }
+    .search-box {
+      position: relative;
+      max-width: 260px;
+      flex: 1;
+    }
+    .search-box input {
+      width: 100%;
+      padding: 0.4rem 0.8rem;
+      border-radius: 999px;
+      border: 1px solid #cfd8dc;
+      font-size: 0.85rem;
+      outline: none;
+    }
+    .search-box input:focus {
+      border-color: #2e7d32;
+      box-shadow: 0 0 0 2px #c8e6c9;
+    }
+
+    .table-wrapper {
+      overflow-x: auto;
+      background: #fff;
+      border-radius: 1rem;
+      border: 1px solid #e0e0e0;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.03);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 750px;
+      font-size: 0.82rem;
+    }
+    thead {
+      background: #e8f5e9;
+    }
+    th, td {
+      padding: 0.55rem 0.6rem;
+      text-align: left;
+      border-bottom: 1px solid #eeeeee;
+      vertical-align: top;
+    }
+    th {
+      font-weight: 600;
+      color: #2e7d32;
+      white-space: nowrap;
+    }
+    tr:hover td {
+      background: #f9fbe7;
+    }
+    .category-badge {
+      display: inline-flex;
+      padding: 0.15rem 0.5rem;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      background: #e8f5e9;
+      color: #2e7d32;
+    }
+    .product-img {
+      width: 46px;
+      height: 46px;
+      object-fit: contain;
+      border-radius: 0.6rem;
+      border: 1px solid #eeeeee;
+      background: #fafafa;
+    }
+    .note-small {
+      font-size: 0.77rem;
+      color: #777;
+      margin-top: 0.4rem;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: minmax(0,2.3fr) minmax(0,2fr);
+      gap: 1.3rem;
+    }
+    .contact-item {
+      margin-bottom: 0.35rem;
+      font-size: 0.9rem;
+    }
+    footer {
+      border-top: 1px solid #e0e0e0;
+      padding: 1rem;
+      font-size: 0.8rem;
+      text-align: center;
+      color: #666;
+      background: #ffffff;
+    }
+
+    @media (max-width: 900px) {
+      .hero-inner {
+        grid-template-columns: 1fr;
+      }
+      .hero-stats { order: -1; }
+      .about-grid, .contact-grid {
+        grid-template-columns: 1fr;
+      }
+      .nav { flex-wrap: wrap; gap: 0.5rem; }
+      .nav-links { font-size: 0.85rem; }
+    }
+  </style>
+</head>
+<body>
+  <link rel="icon" href="/logo.png">
+
+  <header>
+    <nav class="nav">
+      <div class="logo">
+        <div class="logo-icon">
+  <img src="/logo.png" alt="Green Bharat Chemical Logo" />
+</div>
+<div>
+  <div>Green Bharat Chemical</div>
+  <small style="font-weight:400;font-size:0.75rem;">
+    Next-Gen Protection for Every Crop
+  </small>
+</div>
+
+      </div>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#products">Products</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <div>
+        <div class="tagline">Next-Gen Protection for Every Crop</div>
+        <h1>Organics & Agrochemicals for Better Farm Yields</h1>
+        <p>
+          Green Bharat Private Limited manufactures a wide range of plant growth
+          regulators (PGR), insecticides, fungicides and herbicides that help
+          farmers achieve optimum yields with safe, reliable formulations.
+        </p>
+        <div class="hero-badges">
+          <div class="hero-badge">PGR</div>
+          <div class="hero-badge">Insecticide</div>
+          <div class="hero-badge">Fungicide</div>
+          <div class="hero-badge">Herbicide</div>
+        </div>
+        <div class="hero-cta">
+          <a class="btn-primary" href="#products">View Product Catalog</a>
+
+          <!-- NEW BUTTON TO OPEN BROCHURE PDF -->
+          <a class="btn-outline" href="brochure.pdf" target="_blank" rel="noopener">
+            View Brochure (PDF)
+          </a>
+
+         
+        </div>
+      </div>
+      <div class="hero-stats">
+        <h2>Why Green Bharat?</h2>
+        <div class="stats-grid">
+          <div class="stat">
+            <span class="num">50+ </span>
+            <span>Products across PGR, insecticide, fungicide & herbicide.</span>
+          </div>
+          <div class="stat">
+            <span class="num">R&amp;D</span>
+            <span>Formulations developed & tested in approved laboratories.</span>
+          </div>
+          <div class="stat">
+            <span class="num">Quality</span>
+            <span>Pollution-free, environment-safe production practices.</span>
+          </div>
+          <div class="stat">
+            <span class="num">Support</span>
+            <span>Farmer-centric guidance for right usage & dosage.</span>
+          </div>
+        </div>
+        <p class="hero-note">
+          For detailed technical sheets, MSDS and bulk enquiries,
+          contact our technical team using the details below.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <!-- ABOUT -->
+    <section id="about">
+      <h2>About Green Bharat</h2>
+      <p class="section-subtitle">
+        We serve farmers with high-quality organic and chemical solutions,
+        focusing on yield, safety and long-term soil health.
+      </p>
+
+      <div class="about-grid">
+        <div class="card">
+          <h3>Who We Are</h3>
+          <p>
+            We manufacture a large array of high-quality organics and chemical
+            pesticides, fungicides, herbicides and plant growth regulators that
+            aid cultivators in attaining optimum farm yields. Our in-house R&amp;D
+            continually develops specialized formulations and validates them
+            through government-approved laboratories in India and abroad.
+          </p>
+          <p style="margin-top:0.6rem;">
+            We are committed to maintaining industrial standards, worker safety
+            and pollution-free production activity while ensuring that our
+            products are environmentally safe and secure.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Vision &amp; Mission</h3>
+          <ul>
+            <li>Serve farmers with the best inputs and enhance farm yields.</li>
+            <li>Provide safe, effective organic and chemical crop protection solutions.</li>
+            <li>Continuously innovate agrochemical formulations.</li>
+            <li>Deliver high levels of customer satisfaction and farmer smiles.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUCTS -->
+    <section id="products">
+      <h2>Product Catalog</h2>
+      <p class="section-subtitle">
+        Browse our key formulations. Prices are indicative wholesale (without GST),
+        as per latest company price list. Always follow label &amp; leaflet instructions
+        for exact dosage and application.
+      </p>
+
+      <div class="category-chips">
+        <button class="chip active" data-category="all" onclick="filterByCategory('all')">All</button>
+        <button class="chip" data-category="PGR" onclick="filterByCategory('PGR')">PGR</button>
+        <button class="chip" data-category="Insecticide" onclick="filterByCategory('Insecticide')">Insecticide</button>
+        <button class="chip" data-category="Fungicide" onclick="filterByCategory('Fungicide')">Fungicide</button>
+        <button class="chip" data-category="Herbicide" onclick="filterByCategory('Herbicide')">Herbicide</button>
+      </div>
+
+      <div class="product-controls">
+        <div class="search-box">
+          <input type="text" id="searchInput" placeholder="Search by product name or active ingredient…" onkeyup="filterBySearch()" />
+        </div>
+        <span class="note-small">Tip: type “imidacloprid”, “glyphosate”, etc. to find specific actives.</span>
+      </div>
+
+      <div class="table-wrapper">
+        <table id="productTable">
+          <thead>
+            <tr>
+              <th>Image</th>
+              <th>Product</th>
+              <th>Category</th>
+              <th>Active Ingredient / Formulation</th>
+              <th>Packing</th>
+              <th>Ref. Price (ex-GST)</th>
+              <th>Typical Dose<br>(per 15 L water)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- === PGR === -->
+            <tr data-category="PGR">
+              <td>
+                <img src="images/altar.png" alt="Altar" class="product-img" />
+              </td>
+              <td><strong>Altar</strong></td>
+              <td><span class="category-badge">PGR</span></td>
+              <td>PACLOBUTRAZOL 23% W/W SC</td>
+              <td>1 L, 500 ml, 250 ml, 100 ml</td>
+              <td>₹780 / 1 L</td>
+              <td>10 ml</td>
+            </tr>
+            <tr data-category="PGR">
+              <td><img src="images/sticking.png" alt="Sticking" class="product-img" /></td>
+              <td><strong>Sticking</strong></td>
+              <td><span class="category-badge">PGR</span></td>
+              <td>Sticker, Spreader, Activator &amp; Penetrator</td>
+              <td>1 L, 500 ml, 250 ml</td>
+              <td>₹350 / 1 L</td>
+              <td>10 ml</td>
+            </tr>
+            <tr data-category="PGR">
+              <td><img src="images/green-power-95.png" alt="Green Power 95" class="product-img" /></td>
+              <td><strong>Green Power 95</strong></td>
+              <td><span class="category-badge">PGR</span></td>
+              <td>Biostimulant – Schedule VI</td>
+              <td>1 kg, 500 g, 250 g</td>
+              <td>₹130 / 1 kg</td>
+              <td>50 g</td>
+            </tr>
+            <tr data-category="PGR">
+              <td><img src="images/all-in-one.png" alt="All In One" class="product-img" /></td>
+              <td><strong>All In One</strong></td>
+              <td><span class="category-badge">PGR</span></td>
+              <td>Plant Growth Regulator Blend</td>
+              <td>1 L, 500 ml, 250 ml</td>
+              <td>₹1,250 / 1 L</td>
+              <td>25 ml</td>
+            </tr>
+
+            <!-- === INSECTICIDE (sample set) === -->
+            <tr data-category="Insecticide">
+              <td><img src="images/g-nova.png" alt="G Nova" class="product-img" /></td>
+              <td><strong>G Nova</strong></td>
+              <td><span class="category-badge">Insecticide</span></td>
+              <td>NOVALURON 5.25% + INDOXACARB 4.5% W/W SC</td>
+              <td>1 L, 500 ml, 250 ml</td>
+              <td>₹880 / 1 L</td>
+              <td>20 ml</td>
+            </tr>
+            <tr data-category="Insecticide">
+              <td><img src="images/chloroseal.png" alt="Chloroseal" class="product-img" /></td>
+              <td><strong>Chloroseal</strong></td>
+              <td><span class="category-badge">Insecticide</span></td>
+              <td>Chlorpyrifos 50% EC</td>
+              <td>1 L, 500 ml, 250 ml</td>
+              <td>₹400 / 1 L</td>
+              <td>40 ml</td>
+            </tr>
+            <tr data-category="Insecticide">
+              <td><img src="images/corando-lambda.png" alt="Corando Lambda" class="product-img" /></td>
+              <td><strong>Corando Lambda</strong></td>
+              <td><span class="category-badge">Insecticide</span></td>
+              <td>Lambda-Cyhalothrin 5% EC</td>
+              <td>1 L, 500 ml, 250 ml</td>
+              <td>₹260 / 1 L</td>
+              <td>30 ml</td>
+            </tr>
+            <tr data-category="Insecticide">
+              <td><img src="images/stiny.png" alt="Stiny" class="product-img" /></td>
+              <td><strong>Stiny</strong></td>
+              <td><span class="category-badge">Insecticide</span></td>
+              <td>PYRIPROXYFEN 5% + DIAFENTHIURON 25% SE</td>
+              <td>1 L, 500 ml, 250 ml</td>
+              <td>₹780 / 1 L</td>
+              <td>30–40 ml</td>
+            </tr>
+            <tr data-category="Insecticide">
+              <td><img src="images/jumbo-plus.png" alt="Jumbo +" class="product-img" /></td>
+              <td><strong>Jumbo +</strong></td>
+              <td><span class="category-badge">Insecticide</span></td>
+              <td>DIAFENTHIURON 47% + BIFENTHRIN 9.4% SC</td>
+              <td>1 L, 500 ml, 250 ml</td>
+              <td>₹930 / 1 L</td>
+              <td>20 ml</td>
+            </tr>
+            <tr data-category="Insecticide">
+              <td><img src="images/rocket.png" alt="Rocket" class="product-img" /></td>
+              <td><strong>Rocket</strong></td>
+              <td><span class="category-badge">Insecticide</span></td>
+              <td>Fipronil 5% SC</td>
+              <td>1 L, 500 ml, 250 ml</td>
+              <td>₹540 / 1 L</td>
+              <td>30 ml</td>
+            </tr>
+            <tr data-category="Insecticide">
+              <td><img src="images/final-call.png" alt="Final Call" class="product-img" /></td>
+              <td><strong>Final Call</strong></td>
+              <td><span class="category-badge">Insecticide</span></td>
+              <td>PYRIPROXYFEN 10% + BIFENTHRIN 10% W/W EC</td>
+              <td>1 L, 500 ml, 250 ml</td>
+              <td>₹850 / 1 L</td>
+              <td>40 ml</td>
+            </tr>
+            <tr data-category="Insecticide">
+              <td><img src="images/comet.png" alt="Comet" class="product-img" /></td>
+              <td><strong>Comet</strong></td>
+              <td><span class="category-badge">Insecticide</span></td>
+              <td>NOVALURON 5.25% + EMAMECTIN BENZOATE 0.9% W/W SC</td>
+              <td>1 L, 500 ml, 250 ml</td>
+              <td>₹920 / 1 L</td>
+              <td>30–35 ml</td>
+            </tr>
+            <tr data-category="Insecticide">
+              <td><img src="images/mono.png" alt="Mono 69" class="product-img" /></td>
+              <td><strong>Mono 69</strong></td>
+              <td><span class="category-badge">Insecticide</span></td>
+              <td>MONOCROTOPHOS 36% SL</td>
+              <td>1 L, 500 ml, 250 ml</td>
+              <td>₹280 / 1 L</td>
+              <td>40–50 ml</td>
+            </tr>
+            <tr data-category="Insecticide">
+              <td><img src="images/batman.png" alt="Batman" class="product-img" /></td>
+              <td><strong>Batman</strong></td>
+              <td><span class="category-badge">Insecticide</span></td>
+              <td>DIAFENTHIURON 47.8% W/W SC</td>
+              <td>1 L, 500 ml, 250 ml</td>
+              <td>₹880 / 1 L</td>
+              <td>10–15 ml</td>
+            </tr>
+
+            <!-- === FUNGICIDE (sample set) === -->
+            <tr data-category="Fungicide">
+              <td><img src="images/tengo.png" alt="Tengo" class="product-img" /></td>
+              <td><strong>Tengo</strong></td>
+              <td><span class="category-badge">Fungicide</span></td>
+              <td>TEBUCONAZOLE 6.7% + CAPTAN 26.9% W/W SC</td>
+              <td>1 L, 500 ml, 250 ml</td>
+              <td>₹100 / 1 L</td>
+              <td>30 ml</td>
+            </tr>
+            <tr data-category="Fungicide">
+              <td><img src="images/twin-star.png" alt="Twin Star" class="product-img" /></td>
+              <td><strong>Twin Star</strong></td>
+              <td><span class="category-badge">Fungicide</span></td>
+              <td>HEXACONAZOLE 5% + VALIDAMYCIN 2.5% SC</td>
+              <td>1 L, 500 ml, 250 ml</td>
+              <td>₹450 / 1 L</td>
+              <td>40 ml</td>
+            </tr>
+            <tr data-category="Fungicide">
+              <td><img src="images/valure.png" alt="Valure" class="product-img" /></td>
+              <td><strong>Valure</strong></td>
+              <td><span class="category-badge">Fungicide</span></td>
+              <td>VALIDAMYCIN 3% L</td>
+              <td>1 L, 500 ml, 250 ml</td>
+              <td>₹200 / 1 L</td>
+              <td>30–35 ml</td>
+            </tr>
+            <tr data-category="Fungicide">
+              <td><img src="images/super-confab.png" alt="Super Confab" class="product-img" /></td>
+              <td><strong>Super Confab</strong></td>
+              <td><span class="category-badge">Fungicide</span></td>
+              <td>Hexaconazole 5% EC</td>
+              <td>1 L, 500 ml, 250 ml</td>
+              <td>₹300 / 1 L</td>
+              <td>30 ml</td>
+            </tr>
+            <tr data-category="Fungicide">
+              <td><img src="images/confab-plus.png" alt="Confab Plus" class="product-img" /></td>
+              <td><strong>Confab Plus+</strong></td>
+              <td><span class="category-badge">Fungicide</span></td>
+              <td>Hexaconazole 5% SC</td>
+              <td>1 L, 500 ml, 250 ml</td>
+              <td>₹180 / 1 L</td>
+              <td>40 ml</td>
+            </tr>
+            <tr data-category="Fungicide">
+              <td><img src="images/savaj.png" alt="Savaj" class="product-img" /></td>
+              <td><strong>Savaj</strong></td>
+              <td><span class="category-badge">Fungicide</span></td>
+              <td>Lime sulphur 22% SC / Sulphur 55.16% SC (as per label)</td>
+              <td>1 L, 500 ml, 250 ml</td>
+              <td>₹150 / 1 L</td>
+              <td>40–50 ml</td>
+            </tr>
+            <tr data-category="Fungicide">
+              <td><img src="images/folyor.png" alt="Folyor" class="product-img" /></td>
+              <td><strong>Folyor</strong></td>
+              <td><span class="category-badge">Fungicide</span></td>
+              <td>Tebuconazole 25.9% EC</td>
+              <td>1 L, 500 ml, 250 ml</td>
+              <td>₹680 / 1 L</td>
+              <td>25–30 ml</td>
+            </tr>
+
+            <!-- === HERBICIDE (sample set) === -->
+            <tr data-category="Herbicide">
+              <td><img src="images/pendi-green.png" alt="Pendi Green" class="product-img" /></td>
+              <td><strong>Pendi Green</strong></td>
+              <td><span class="category-badge">Herbicide</span></td>
+              <td>PENDIMETHALIN 30% EC</td>
+              <td>1 L, 500 ml</td>
+              <td>₹380 / 1 L</td>
+              <td>100 ml</td>
+            </tr>
+            <tr data-category="Herbicide">
+              <td><img src="images/pendosuper.png" alt="Pendo Super" class="product-img" /></td>
+              <td><strong>Pendo Super</strong></td>
+              <td><span class="category-badge">Herbicide</span></td>
+              <td>PENDIMETHALIN 38.7% CS</td>
+              <td>700 ml</td>
+              <td>₹350 / 700 ml</td>
+              <td>50 ml</td>
+            </tr>
+            <tr data-category="Herbicide">
+              <td><img src="images/pendi-power.png" alt="Pendi Power" class="product-img" /></td>
+              <td><strong>Pendi Power</strong></td>
+              <td><span class="category-badge">Herbicide</span></td>
+              <td>PENDIMETHALIN 30% + IMAZETHAPYR 2% EC</td>
+              <td>1 L, 500 ml</td>
+              <td>₹380 / 1 L</td>
+              <td>100 ml</td>
+            </tr>
+            <tr data-category="Herbicide">
+              <td><img src="images/sunami.png" alt="Sunami" class="product-img" /></td>
+              <td><strong>Sunami</strong></td>
+              <td><span class="category-badge">Herbicide</span></td>
+              <td>Paraquat Dichloride 24% SL</td>
+              <td>1 L, 500 ml</td>
+              <td>₹240 / 1 L</td>
+              <td>50–100 ml</td>
+            </tr>
+            <tr data-category="Herbicide">
+              <td><img src="images/greenfy41.png" alt="Greenfy 41" class="product-img" /></td>
+              <td><strong>Greenfy 41</strong></td>
+              <td><span class="category-badge">Herbicide</span></td>
+              <td>Glyphosate 41% SL</td>
+              <td>1 L, 500 ml</td>
+              <td>₹300 / 1 L</td>
+              <td>100 ml</td>
+            </tr>
+            <tr data-category="Herbicide">
+              <td><img src="images/round-plus.png" alt="Round Plus" class="product-img" /></td>
+              <td><strong>Round Plus</strong></td>
+              <td><span class="category-badge">Herbicide</span></td>
+              <td>IPA Salt of Glyphosate 41% SL (Non-selective)</td>
+              <td>1 L, 500 ml, 250 ml</td>
+              <td>₹300 / 1 L</td>
+              <td>80–120 ml</td>
+            </tr>
+            <tr data-category="Herbicide">
+              <td><img src="images/tera-super.png" alt="Tera Super" class="product-img" /></td>
+              <td><strong>Tera Super</strong></td>
+              <td><span class="category-badge">Herbicide</span></td>
+              <td>Quizalofop Ethyl 10% EC</td>
+              <td>1 L, 500 ml, 250 ml</td>
+              <td>₹580 / 1 L</td>
+              <td>25–40 ml</td>
+            </tr>
+            <tr data-category="Herbicide">
+              <td><img src="images/xyls.png" alt="Xyls" class="product-img" /></td>
+              <td><strong>Xyls</strong></td>
+              <td><span class="category-badge">Herbicide</span></td>
+              <td>QUIZALOFOP ETHYL 4% + OXYFLOURFEN 6% EC</td>
+              <td>1 L, 500 ml</td>
+              <td>₹650 / 1 L</td>
+              <td>30 ml</td>
+            </tr>
+            <tr data-category="Herbicide">
+              <td><img src="images/seff-gard.png" alt="Seff Gard" class="product-img" /></td>
+              <td><strong>Seff Gard</strong></td>
+              <td><span class="category-badge">Herbicide</span></td>
+              <td>QUIZALOFOP ETHYL 7.5% + IMAZETHAPYR 15% W/W EC</td>
+              <td>1 L, 500 ml</td>
+              <td>₹880 / 1 L</td>
+              <td>20 ml</td>
+            </tr>
+            <tr data-category="Herbicide">
+              <td><img src="images/green71.png" alt="Green 71" class="product-img" /></td>
+              <td><strong>Green 71</strong></td>
+              <td><span class="category-badge">Herbicide</span></td>
+              <td>Ammonium Salt of Glyphosate 71% SG</td>
+              <td>100 g sachet</td>
+              <td>₹45 / 100 g</td>
+              <td>100 g (per pump as per label)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="note-small">
+        NOTE: Above is a selected list. You can add all remaining products by copying a row
+        and updating name, formulation, packing, price and dose using your internal price list.
+      </p>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <h2>Contact &amp; Factory Address</h2>
+      <p class="section-subtitle">
+        For dealership, bulk orders, custom formulations or technical queries,
+        reach us using the details below.
+      </p>
+      <div class="contact-grid">
+        <div class="card">
+          <h3>Registered Office &amp; Plant</h3>
+          <p class="contact-item">
+            Green Bharat Private Limited<br />
+            At. Revenue Survey No.-206 Paiki 4, Plot No. 9, Kankot Road,<br />
+            Taluka Lodhika, At Village Ravki, District Rajkot,<br />
+            Gujarat, India – 360 004.
+          </p>
+          <p class="contact-item">
+            Website: <a href="https://www.greenbharatchemical.com" target="_blank" rel="noopener">
+            www.greenbharatchemical.com</a>
+          </p>
+          <p class="contact-item">
+            Email: <a href="mailto:greenbharatchemical@gmail.com">greenbharatchemical@gmail.com</a>
+          </p>
+        </div>
+        <div class="card">
+          <h3>Phone / WhatsApp</h3>
+          <p class="contact-item">
+            Phone: +91 7486060291 <br />
+           
+          </p>
+          <p class="contact-item">
+            For order tracking and dealer support, please contact during
+            business hours (IST).
+          </p>
+          <p class="contact-item">
+            You can also link these numbers with WhatsApp buttons on this page.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> Green Bharat Private Limited. All rights reserved.
+  </footer>
+
+  <script>
+    function filterByCategory(category) {
+      const rows = document.querySelectorAll("#productTable tbody tr");
+      const chips = document.querySelectorAll(".chip");
+      chips.forEach(chip => {
+        chip.classList.toggle("active", chip.dataset.category === category || (category === "all" && chip.dataset.category === "all"));
+      });
+      rows.forEach(row => {
+        const rowCategory = row.getAttribute("data-category");
+        if (category === "all" || rowCategory === category) {
+          row.style.display = "";
+        } else {
+          row.style.display = "none";
+        }
+      });
+      document.getElementById("searchInput").value = "";
+    }
+
+    function filterBySearch() {
+      const query = document.getElementById("searchInput").value.toLowerCase();
+      const rows = document.querySelectorAll("#productTable tbody tr");
+      rows.forEach(row => {
+        const text = row.innerText.toLowerCase();
+        row.style.display = text.includes(query) ? "" : "none";
+      });
+      // reset category chips to "All"
+      const chips = document.querySelectorAll(".chip");
+      chips.forEach(chip => {
+        chip.classList.toggle("active", chip.dataset.category === "all");
+      });
+    }
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
